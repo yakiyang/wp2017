@@ -29,7 +29,6 @@ window.addEventListener("scroll", myFunction);
 function myFunction() {
 
 var x=document.documentElement.scrollTop;
-document.getElementById("num").innerHTML=x;
 
 if(x>50 && x<200){
 document.getElementById("cir").setAttribute("r",x+450 );
