@@ -1,7 +1,24 @@
-#main{
-  padding: 50px 0;
-  width: 700px;
-  margin: 0 auto;
-  font-family:Microsoft JhengHei;
+body {
+height: 2000px;
 }
-
+#main{
+padding: 50px 0;
+width: 700px;
+margin:0 auto;
+}
+#mySVG {
+width: 1300px;
+height: 2000px;
+margin:0;
+}
+#num{
+position:fixed;
+}
+body{
+margin:0;
+}
+.box{
+height:500px;
+text-align: -webkit-center;
+padding-top: 30px;
+}
