@@ -1,0 +1,48 @@
+body {
+height: 2000px;
+margin:0;
+}
+#main{
+padding: 50px 0;
+width: 700px;
+margin:0 auto;
+}
+#mySVG {
+width: 1300px;
+height: 2000px;
+margin:0;
+}
+.box{
+height:500px;
+text-align: -webkit-center;
+padding-top: 30px;
+}
+#chat{
+visibility: visible;
+height: 300px;
+margin: auto;
+}
+#content {
+height: 60%;
+border-style: inset;
+width: 80%;
+margin: auto;
+}
+#btn{
+border-radius: 12px;
+background-color: white;
+color: black;
+border: 2px solid orange;
+}
+#input_text{
+border-radius: 12px;
+border: 2px solid orange;
+width: 700px;
+}
+#input{
+margin: auto;
+width: 65%;
+}
+h1 {
+  text-align: -webkit-center;
+  }
