@@ -1,3 +1,4 @@
+
 // Get the id of the <path> element and the length of <path>
 var red1 = document.getElementById("red1");
 var red2 = document.getElementById("red2");
@@ -69,3 +70,42 @@ red5.style.strokeDashoffset = length5 - draw5;
 
 }
 
+$(document).ready(function(){                                                               
+
+    setInterval(function(){
+      $.ajax({
+        method: "POST",
+        url: "do.php"
+      }).done(function(data){
+        $("#content").html(data);
+      })
+    }, 1000);
+
+    $('button').click(function(){
+      $.ajax({
+        method: "POST",
+        url: "do.php",
+        data: {
+          text: $('input').val()
+        }
+      }).done(function(data){
+        $("#content").html(data);
+        $('input').val("");
+      });
+    });
+
+  $(document).keydown(function(e){
+    if(e.keyCode == 13) {
+      $.ajax({
+        method: "POST",
+        url: "do.php",
+        data: {
+          text: $('input').val()
+        }
+      }).done(function(data){
+        $("#content").html(data);
+        $('input').val("");
+      });
+    }
+  });
+});
