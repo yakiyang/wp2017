@@ -70,7 +70,7 @@ function myFunction() {
 
 $(document).ready(function(){                                                               
 
-    setInterval(function(){
+   /* setInterval(function(){
       $.ajax({
         method: "POST",
         url: "do.php"
@@ -78,17 +78,17 @@ $(document).ready(function(){
         $("#content").html(data);
       })
     }, 1000);
-
+*/
     $('button').click(function(){
       $.ajax({
         method: "POST",
         url: "do.php",
         data: {
-          text: $('input').val()
+          text: $('input[name=text]').val()
         }
       }).done(function(data){
         $("#content").html(data);
-        $('input').val("");
+        $('input[name=text]').val("");
       });
     });
 
@@ -98,11 +98,11 @@ $(document).ready(function(){
         method: "POST",
         url: "do.php",
         data: {
-          text: $('input').val()
+          text: $('input[name=text]').val()
         }
       }).done(function(data){
         $("#content").html(data);
-        $('input').val("");
+        $('input[name=text]').val("");
       });
     }
   });
