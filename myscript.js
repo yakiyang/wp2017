@@ -66,45 +66,44 @@ function myFunction() {
   red3.style.strokeDashoffset = length3 - draw3;
   red4.style.strokeDashoffset = length4 - draw4;
   red5.style.strokeDashoffset = length5 - draw5;
-
 }
 
 $(document).ready(function(){                                                               
 
     setInterval(function(){
-        $.ajax({
-method: "POST",
-url: "do.php"
-}).done(function(data){
-  $("#content").html(data);
-  })
-        }, 1000);
+      $.ajax({
+        method: "POST",
+        url: "do.php"
+      }).done(function(data){
+        $("#content").html(data);
+      })
+    }, 1000);
 
     $('button').click(function(){
       $.ajax({
-method: "POST",
-url: "do.php",
-data: {
-text: $('input').val()
-}
-}).done(function(data){
-  $("#content").html(data);
-  $('input').val("");
-  });
+        method: "POST",
+        url: "do.php",
+        data: {
+          text: $('input').val()
+        }
+      }).done(function(data){
+        $("#content").html(data);
+        $('input').val("");
       });
-
-$(document).keydown(function(e){
-    if(e.keyCode == 13) {
-    $.ajax({
-method: "POST",
-url: "do.php",
-data: {
-text: $('input').val()
-}
-}).done(function(data){
-  $("#content").html(data);
-  $('input').val("");
-  });
-    }
     });
+
+  $(document).keydown(function(e){
+    if(e.keyCode == 13) {
+      $.ajax({
+        method: "POST",
+        url: "do.php",
+        data: {
+          text: $('input').val()
+        }
+      }).done(function(data){
+        $("#content").html(data);
+        $('input').val("");
+      });
+    }
+  });
 });
